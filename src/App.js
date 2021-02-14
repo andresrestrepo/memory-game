@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
 
+import { Container, Alert } from 'reactstrap';
+
+import Board from './components/Board';
+import { ToastProvider } from 'react-toast-notifications';
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ToastProvider>
+			<Container>
+				<div className="App">
+					<Alert color="warning">
+						MEMORY GAME
+      			</Alert>
+
+					<Board />
+				</div>
+			</Container>
+		</ToastProvider>
+
+	);
 }
 
 export default App;
